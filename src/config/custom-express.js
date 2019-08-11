@@ -14,6 +14,8 @@ app.use(bodyParser.json())
 
 consign()
     .include('src/app/routes')
+    .then('src/app/infra')
+    .then('src/app/views')
     .into(app)
  
 module.exports = app
