@@ -1,14 +1,16 @@
-const express = require('express')
+const express = require('express');
+const app = express();
 const bodyParser = require('body-parser')
 const consign = require('consign')
-
-module.exports = () => {
-
-    const app = express();
+//const rotas = require('../app/routes/compra-rotas')
     
-    app.use(bodyParser.urlencoded({extended: true}))
-    app.use(bodyParser.json())
-    
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
-    return app
-}
+//rotas(app)
+
+consign()
+    .include('src/app/routes')
+    .into(app)
+ 
+module.exports = app
