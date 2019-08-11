@@ -5,6 +5,6 @@ module.exports = (app) => {
     })
 
     app.get('/compras', (req, res) => {
-        res.send('Compras')
+        res.marko(require('../views/home.marko'))
     })
 }
