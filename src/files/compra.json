@@ -1,0 +1,10 @@
+{
+    "compra" : {
+        "id" : "123",
+        "produto" : "celular",
+        "preco" : 1500,
+        "modelo" : "iPhone X",
+        "localCompra" : "Fast Shop",
+        "dataCompra" : "2019/10/15"
+    }
+}
